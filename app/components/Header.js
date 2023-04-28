@@ -46,8 +46,8 @@ const Header = () => {
             </div>
 
             <div className="text-4xl flex items-center flex-col gap-3 mt-12">
-              <Link href="writing">Writings</Link>
-              <p>Media</p>
+              <Link href="writing" ><p onClick={() => setOpen(false)}>Writings</p></Link>
+              <Link href='media' onClick={() => setOpen(false)}>Media</Link>
               <p>Contact</p>
             </div>
 
