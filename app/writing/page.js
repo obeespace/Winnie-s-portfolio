@@ -4,9 +4,10 @@ import React from "react";
 const cardData = [
   {name: 'Fashion'},
   {name: 'Food'},
-  {name: 'Fantasy'},
-  {name: 'Culture'},
+  {name: 'Stories'},
+  {name: 'Entertainment'},
   {name: 'Livestyle'},
+  {name: 'Video Scripts'}
 ]
 
 const Card = (props) => {

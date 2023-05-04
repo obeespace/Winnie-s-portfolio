@@ -30,7 +30,7 @@ const Header = () => {
           <div className="flex text-sm gap-2 lg:gap-4">
             <Link href="writing">Writer</Link>
             <p>Counsellor</p>
-            <p>Creative consultant</p>
+            <p>Media Personality</p>
           </div>
         </div>
       </div>
@@ -46,9 +46,9 @@ const Header = () => {
             </div>
 
             <div className="text-4xl flex items-center flex-col gap-3 mt-12">
+            <Link href='/'><p onClick={() => setOpen(false)}>About</p></Link>
               <Link href="writing" ><p onClick={() => setOpen(false)}>Writings</p></Link>
-              <Link href='media' onClick={() => setOpen(false)}>Media</Link>
-              <p>Contact</p>
+              <Link href='contact'><p onClick={() => setOpen(false)}>Contact</p></Link>
             </div>
 
             <div className="flex justify-center text-2xl gap-5 mt-16">
