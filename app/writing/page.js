@@ -7,12 +7,12 @@ const cardData = [
   {name: 'Stories'},
   {name: 'Entertainment'},
   {name: 'Livestyle'},
-  {name: 'Video Scripts'}
+  {name: 'Scripts'}
 ]
 
 const Card = (props) => {
   return (
-    <div className="mt-7 shadow-sm shadow-white rounded-md py-4 px-10 lg:w-3/12 hover:scale-110 transition ease-in-out delay-150 duration-300">
+    <div className='mt-7 shadow-sm shadow-white rounded-md py-4 px-10 lg:w-3/12 lg:hover:scale-110 transition ease-in-out delay-150 duration-300'>
       <p className="text-2xl group-hover:scale-105">{props.name}</p>
       <p className="text-sm mt-10"><Link href={`writing/${props.name.toLowerCase()}`}>Click here to see Projects</Link></p>
     </div>

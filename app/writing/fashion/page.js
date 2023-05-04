@@ -1,11 +1,22 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import WritingBlock from '@/app/components/WritingBlock'
 
 const page = () => {
+  const [writingData, setWritingData] = useState(null)
+  useEffect(() => {
+    fetch('http://localhost:4100/data')
+    .then(res => {return res.json()})
+    .then(data => {return setWritingData(data)})
+  }, [])
+
+  const displayCategory = writingData?.filter((n) => n.category === "Fashion")
   return (
     <div className='text-white lg:pt-10 w-5/6 mx-auto'>
       <p className='text-3xl'>Fashion</p>
-      <WritingBlock/>
+      {displayCategory && displayCategory.map(data => {
+        return <WritingBlock key={data.id} {...data}/>
+      })}
     </div>
   )
 }
