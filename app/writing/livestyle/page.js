@@ -1,6 +1,7 @@
 'use client'
 import WritingBlock from '@/app/components/WritingBlock'
 import React, { useEffect, useState } from 'react'
+import data from '../../components/data'
 
 const page = () => {
     const [writingData, setWritingData] = useState(null)
@@ -10,7 +11,7 @@ const page = () => {
       .then(data => {return setWritingData(data)})
     }, [])
   
-    const displayCategory = writingData?.filter((n) => n.category === "Livestyle")
+    const displayCategory = data?.filter((n) => n.category === "Livestyle")
     return (
       <div className='text-white lg:pt-10 w-5/6 mx-auto'>
         <p className='text-3xl'>Livestyle</p>
